@@ -8,18 +8,16 @@ class Main {
     static int number2;
     static int result;
 
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String ar = scanner.nextLine();
-        Main.calc(ar);
+        String string = scanner.nextLine();
+        Main.calc(string);
     }
 
     public static String calc(String inputString) throws IllegalArgumentException {
 
         String[] strings = inputString.split(" ");
         try {
-
             if (strings.length != 3) {
                 throw new IllegalArgumentException("Некорректный ввод данных");
             }
@@ -43,6 +41,7 @@ class Main {
         }
         return inputString;
     }
+
     static boolean isNumeric(String string) {
         if (string.equals("1")) {
             return true;
@@ -131,8 +130,6 @@ class Main {
 
     }
 
-
-
     private static int romanToNumber(String roman) {
         try {
             if (roman.equals("I")) {
@@ -202,7 +199,3 @@ class Main {
     }
 }
 
-//Ты так же можешь добавлять свои классы (этот класс, если не потребуется, можно удалить)
-class CalculatorHelper {
-
-}
